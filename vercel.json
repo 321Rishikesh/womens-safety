@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": null,
+  "buildCommand": "npm run build",
   "outputDirectory": "public",
   "functions": {
     "api/index.php": {
@@ -11,15 +11,15 @@
   "rewrites": [
     {
       "source": "/build/:path*",
-      "destination": "/public/build/:path*"
+      "destination": "/build/:path*"
     },
     {
       "source": "/favicon.ico",
-      "destination": "/public/favicon.ico"
+      "destination": "/favicon.ico"
     },
     {
       "source": "/robots.txt",
-      "destination": "/public/robots.txt"
+      "destination": "/robots.txt"
     },
     {
       "source": "/(.*)",
