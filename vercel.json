@@ -1,7 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "php -r \"copy('https://getcomposer.org/installer','composer-setup.php');\" && php composer-setup.php --install-dir=. --filename=composer.phar && php composer.phar install --no-dev --optimize-autoloader && rm composer-setup.php && npm ci",
   "buildCommand": "npm run build",
   "outputDirectory": "public",
   "functions": {
