@@ -1,0 +1,26 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.6.2"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/build/:path*",
+      "destination": "/public/build/:path*"
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "/public/favicon.ico"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/public/robots.txt"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/api/index.php"
+    }
+  ]
+}
